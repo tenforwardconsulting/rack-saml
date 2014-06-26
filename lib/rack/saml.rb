@@ -101,7 +101,7 @@ module Rack
         if timeout.nil?
           period = nil
         else
-          period = Time.now + timeout
+          period = Time.now.to_i + timeout
         end
         case type
         when 'ds'
